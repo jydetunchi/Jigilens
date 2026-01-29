@@ -12,7 +12,7 @@ const interval = 5200;
 
 function goto(n) {
   idx = (n + count) % count;
-  bgSlider.style.transform = `translateX(-${idx * 100}%)`;
+  if (bgSlider) bgSlider.style.transform = `translateX(-${idx * 100}%)`;
 }
 
 function fwd() { goto(idx + 1); }
