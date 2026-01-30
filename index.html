@@ -4,11 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Timeless cinematic photography by Jiggy Lens. Portraits, events, and products. Lagos-based. Worldwide reach.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="/assets/images/hero/hero-1.webp">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" as="style">
+  <meta property="og:title" content="JIGGY LENS — Cinematic Photography">
+  <meta property="og:description" content="Timeless cinematic photography by Jiggy Lens. Portraits, events, and products.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens%20dabu%20shoot-1-2.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JIGGY LENS — Cinematic Photography">
+  <meta name="twitter:description" content="Timeless cinematic photography. No stiff poses.">
   <title>JIGGY LENS — Cinematic Photography</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://jiggylens.example/">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+  <a class="skip-to-content" href="#main-content">Skip to content</a>
 
 <header class="site-header">
   <div class="brand">
@@ -23,25 +37,22 @@
 </header>
 
 <!-- HERO – sharpened cinematic full-bleed -->
-<section class="hero hero--fullscreen">
+<section id="main-content" class="hero hero--fullscreen">
   <div class="hero-bg-slider">
-    <div class="slide active"><img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens%20dabu%20shoot-1-2.jpg" alt="Jiggy Lens portfolio shot"></div>
-    <div class="slide"><img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens%20dabu%20shoot-4.jpg" alt="Portrait session"></div>
-    <div class="slide"><img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/products/jigilens%20products%20shoot-1.jpg" alt="Product photography"></div>
-    <div class="slide"><img src="assets/images/events/DSC01291.jpg" alt="Event photography"></div>
+    <div class="slide active"><img src="/assets/images/hero/hero-1.svg" srcset="/assets/images/hero/hero-1.webp 1600w, /assets/images/hero/hero-1.jpg 1600w, /assets/images/hero/hero-1.svg" sizes="100vw" width="1600" height="900" alt="Cinematic portrait by Jiggy Lens"></div>
+    <div class="slide"><img src="/assets/images/hero/hero-2.svg" srcset="/assets/images/hero/hero-2.webp 1600w, /assets/images/hero/hero-2.jpg 1600w, /assets/images/hero/hero-2.svg" sizes="100vw" width="1600" height="900" alt="Portrait session"></div>
+    <div class="slide"><img src="/assets/images/hero/hero-3.svg" srcset="/assets/images/hero/hero-3.webp 1600w, /assets/images/hero/hero-3.jpg 1600w, /assets/images/hero/hero-3.svg" sizes="100vw" width="1600" height="900" alt="Product photography"></div>
+    <div class="slide"><img src="/assets/images/hero/hero-4.svg" srcset="/assets/images/hero/hero-4.webp 1600w, /assets/images/hero/hero-4.jpg 1600w, /assets/images/hero/hero-4.svg" sizes="100vw" width="1600" height="900" alt="Event photography"></div>
   </div>
 
   <div class="hero-overlay"></div>
 
   <div class="hero-inner">
-    <h1 class="hero-title">Timeless.<br>No stiff poses.</h1>
-    <p class="hero-subtitle">
-      Cinematic light. Honest moments. Minimal frames.<br>
-      Lagos-based. Worldwide reach.
-    </p>
+    <h1 class="hero-title">Cinematic Photography that Feels Honest</h1>
+    <p class="hero-subtitle">Crafted lighting, intuitive direction, images that endure — Lagos-based, available worldwide.</p>
     <div class="hero-cta">
-      <button class="btn-primary" onclick="scrollTo('#booking')">Book Session</button>
-      <button class="btn-outline" onclick="scrollTo('#gallery')">See Work</button>
+      <button class="btn-primary" id="primaryCta" onclick="scrollTo('#booking')">Work / Contact</button>
+      <a class="hero-secondary" href="#gallery">See Work</a>
     </div>
   </div>
 
@@ -54,65 +65,70 @@
   <div class="section-header">
     <h2 class="section-title">Selected Work</h2>
     <p class="section-lead">Portraits. Events. Products. Moments that last.</p>
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="portraits">Portraits</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="products">Products</button>
+    </div>
   </div>
 
   <!-- PORTRAITS -->
-  <div class="category">
+  <div class="category" data-category="portraits">
     <div class="category-header">
       <h3 class="category-title">Portraits</h3>
       <a href="pages/portraits.html" class="category-link view-all-cta">View All →</a>
     </div>
     <div class="gallery-grid portraits-grid">
       <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens%20dabu%20shoot-1-2.jpg" alt="Portrait" loading="lazy">
+        <img src="/assets/images/portraits/portrait-1.webp" srcset="/assets/images/portraits/portrait-1.webp 600w, /assets/images/portraits/portrait-1.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="750" alt="Portrait" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens%20dabu%20shoot-4.jpg" alt="Portrait" loading="lazy">
+        <img src="/assets/images/portraits/portrait-2.webp" srcset="/assets/images/portraits/portrait-2.webp 600w, /assets/images/portraits/portrait-2.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="750" alt="Portrait" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/portraits/jigilens-1.jpg" alt="Portrait" loading="lazy">
+        <img src="/assets/images/portraits/portrait-3.webp" srcset="/assets/images/portraits/portrait-3.webp 600w, /assets/images/portraits/portrait-3.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="750" alt="Portrait" loading="lazy">
       </div>
     </div>
   </div>
 
   <!-- EVENTS -->
-  <div class="category">
+  <div class="category" data-category="events">
     <div class="category-header">
       <h3 class="category-title">Events</h3>
       <a href="pages/events.html" class="category-link view-all-cta">View All →</a>
     </div>
     <div class="gallery-grid events-grid">
       <div class="gallery-item">
-        <img src="assets/images/events/DSC01291.jpg" alt="Event Celebration" loading="lazy">
+        <img src="/assets/images/events/DSC01291.webp" srcset="/assets/images/events/DSC01291.webp 600w, /assets/images/events/DSC01291.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Event Celebration" loading="lazy">
         <span class="item-label">Celebration</span>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/events/DSC01530.jpg" alt="Event Details" loading="lazy">
+        <img src="/assets/images/events/DSC01530.webp" srcset="/assets/images/events/DSC01530.webp 600w, /assets/images/events/DSC01530.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Event Details" loading="lazy">
         <span class="item-label">Details</span>
       </div>
       <div class="gallery-item">
-        <img src="assets/images/events/abgadaguy.jpg" alt="Guest Portrait" loading="lazy">
+        <img src="/assets/images/events/abgadaguy.webp" srcset="/assets/images/events/abgadaguy.webp 600w, /assets/images/events/abgadaguy.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Guest Portrait" loading="lazy">
         <span class="item-label">Portraits</span>
       </div>
     </div>
   </div>
 
   <!-- PRODUCTS -->
-  <div class="category">
+  <div class="category" data-category="products">
     <div class="category-header">
       <h3 class="category-title">Products</h3>
       <a href="pages/products.html" class="category-link view-all-cta">View All →</a>
     </div>
     <div class="gallery-grid products-grid">
       <div class="gallery-item">
-      <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/products/jigilens%20products%20shoot-1.jpg" alt="Product" loading="lazy">
+        <img src="/assets/images/products/product-1.webp" srcset="/assets/images/products/product-1.webp 600w, /assets/images/products/product-1.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Product" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/products/jigilens%20products%20shoot-12.jpg" alt="Product" loading="lazy">
+        <img src="/assets/images/products/product-2.webp" srcset="/assets/images/products/product-2.webp 600w, /assets/images/products/product-2.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Product" loading="lazy">
       </div>
       <div class="gallery-item">
-        <img src="https://raw.githubusercontent.com/jydetunchi/Jiggylens/main/assets/images/products/jigilens%20products%20shoot-2.jpg" alt="Product" loading="lazy">
+        <img src="/assets/images/products/product-3.webp" srcset="/assets/images/products/product-3.webp 600w, /assets/images/products/product-3.jpg 600w" sizes="(max-width: 768px) 100vw, 33vw" width="600" height="400" alt="Product" loading="lazy">
       </div>
     </div>
   </div>
@@ -125,8 +141,23 @@
     <h2 class="section-title">About</h2>
   </div>
   <div class="about-content">
-    <p>I'm Jiggy Lens, a cinematic photographer based in Lagos, Nigeria. I create honest, minimal moments through light and composition. No forced poses. No pretense. Just timeless frames that tell your story.</p>
+    <blockquote class="about-quote">"Timeless frames that tell your story. No forced poses. No pretense."</blockquote>
+    <p>I'm Jiggy Lens, a cinematic photographer based in Lagos, Nigeria. I create honest, minimal moments through light and composition, crafting images that endure.</p>
     <p>Working with individuals, couples, brands, and events worldwide, I blend technical precision with intuitive storytelling. Every shoot is a collaboration—your vision becomes reality through my lens.</p>
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-value">500+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">20+</div>
+        <div class="stat-label">Countries</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">8+ Yrs</div>
+        <div class="stat-label">Experience</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -137,7 +168,25 @@
     <p class="section-lead">Ready to create something timeless? Let's talk.</p>
   </div>
   <div class="booking-contact">
-    <a href="mailto:hello@jiggylens.com" class="contact-link">hello@jiggylens.com</a>
+    <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Send Inquiry</button>
+        <a href="mailto:hello@jiggylens.com" class="btn-outline">Or email directly</a>
+      </div>
+      <div id="contactFeedback" role="status" aria-live="polite" class="contact-feedback"></div>
+    </form>
     <div class="contact-social">
       <a href="https://instagram.com/jiggylens" target="_blank" class="social-icon">Instagram</a>
       <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="social-icon">WhatsApp</a>
@@ -158,6 +207,11 @@
   </div>
 </footer>
 
+<button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">↑</button>
+
 <script src="js/main.js"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"JIGGY LENS","url":"https://jiggylens.example/","logo":"https://jiggylens.example/assets/logo.svg","sameAs":["https://instagram.com/jiggylens","https://x.com/Royalwhale"]}
+</script>
 </body>
 </html>

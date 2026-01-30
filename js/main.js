@@ -28,6 +28,33 @@ autoStart();
 heroSection?.addEventListener('mouseenter', autoStop);
 heroSection?.addEventListener('mouseleave', autoStart);
 
+// ── SCROLL TO TOP BUTTON ──
+const scrollToTopBtn = document.getElementById('scrollToTop');
+if (scrollToTopBtn) {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ── PRELOAD NEXT HERO SLIDER IMAGE ──
+function preloadNextSlide() {
+  const nextIdx = (idx + 1) % count;
+  const nextImg = bgSlides[nextIdx]?.querySelector('img');
+  if (nextImg && !nextImg.complete) {
+    const preloadImg = new Image();
+    preloadImg.src = nextImg.src;
+  }
+}
+setInterval(preloadNextSlide, 1000);
+
 // ── FADE-IN ON SCROLL ──
 const fadeObs = new IntersectionObserver(es => {
   es.forEach(e => {
@@ -99,8 +126,71 @@ function applyImageOrientation() {
 document.addEventListener('DOMContentLoaded', () => {
   applyImageOrientation();
   initLightbox();
+  initGalleryFilters();
 });
 window.addEventListener('resize', applyImageOrientation);
+
+// ── CONTACT FORM (mailto fallback) ──
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  const feedback = document.getElementById('contactFeedback');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      feedback.textContent = 'Please complete name, email and message.';
+      feedback.style.color = 'crimson';
+      return;
+    }
+
+    feedback.textContent = 'Opening mail client...';
+    feedback.style.color = '';
+
+    const subject = encodeURIComponent('Jiggy Lens — Booking Inquiry from ' + name);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    const mailto = `mailto:hello@jiggylens.com?subject=${subject}&body=${body}`;
+
+    // Try to open mail client
+    window.location.href = mailto;
+    setTimeout(() => {
+      feedback.textContent = 'If your mail client did not open, please email hello@jiggylens.com';
+    }, 1200);
+  });
+});
+
+// ── GALLERY FILTERS ──
+function initGalleryFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const categories = document.querySelectorAll('[data-category]');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      
+      // Update active button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Show/hide categories
+      categories.forEach(cat => {
+        if (filter === 'all' || cat.getAttribute('data-category') === filter) {
+          cat.style.display = 'block';
+          setTimeout(() => cat.style.opacity = '1', 10);
+          cat.style.transition = 'opacity 0.4s ease';
+          cat.style.opacity = '1';
+        } else {
+          cat.style.opacity = '0';
+          setTimeout(() => cat.style.display = 'none', 400);
+        }
+      });
+    });
+  });
+}
 
 // ── LIGHTBOX / MODAL ──
 function initLightbox() {
@@ -116,6 +206,7 @@ function initLightbox() {
       <div class="lightbox-media"><img src="" alt="" /></div>
       <button class="lightbox-nav lightbox-next" aria-label="Next">›</button>
       <div class="lightbox-caption"></div>
+      <div class="lightbox-counter"></div>
     </div>
   `;
 
@@ -123,6 +214,7 @@ function initLightbox() {
 
   const imgEl = overlay.querySelector('.lightbox-media img');
   const captionEl = overlay.querySelector('.lightbox-caption');
+  const counterEl = overlay.querySelector('.lightbox-counter');
   const closeBtn = overlay.querySelector('.lightbox-close');
   const prevBtn = overlay.querySelector('.lightbox-prev');
   const nextBtn = overlay.querySelector('.lightbox-next');
@@ -144,6 +236,7 @@ function initLightbox() {
     imgEl.src = src;
     imgEl.alt = alt;
     captionEl.textContent = label || alt;
+    counterEl.textContent = `${index + 1} / ${images.length}`;
 
     overlay.classList.add('open');
     currentIndex = index;
