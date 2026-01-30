@@ -311,7 +311,7 @@ body {
 }
 .products-grid .gallery-item { 
   aspect-ratio: auto;
-  min-height: 160px;
+  min-height: 140px;
 }
 
 /* Image orientation helpers (set by JS) */
