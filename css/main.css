@@ -50,6 +50,7 @@ body {
   height: 50px;
   display: block;
   flex-shrink: 0;
+  object-fit: contain;
 }
 
 .brand-mark {
