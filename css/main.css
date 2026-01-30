@@ -122,7 +122,7 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.62) 60%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(135deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.75) 80%, rgba(0,0,0,0.9) 100%);
   z-index: 1;
 }
 
@@ -311,7 +311,7 @@ body {
 }
 .products-grid .gallery-item { 
   aspect-ratio: auto;
-  min-height: 180px;
+  min-height: 160px;
 }
 
 /* Image orientation helpers (set by JS) */
