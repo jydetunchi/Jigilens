@@ -1,4 +1,4 @@
-## Copilot / AI Agent Instructions — JIGGY LENS
+## Copilot / AI Agent Instructions — JIGI LENS
 
 Purpose: short, actionable guidance so an AI coding agent can be productive immediately.
 

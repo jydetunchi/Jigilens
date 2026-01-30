@@ -65,7 +65,7 @@ const fadeObs = new IntersectionObserver(es => {
 document.querySelectorAll('.section').forEach(s => fadeObs.observe(s));
 
 // ── SMOOTH SCROLL ──
-function scrollTo(selector) {
+function smoothScrollTo(selector) {
   const element = document.querySelector(selector);
   if (element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     feedback.textContent = 'Opening mail client...';
     feedback.style.color = '';
 
-    const subject = encodeURIComponent('Jiggy Lens — Booking Inquiry from ' + name);
+    const subject = encodeURIComponent('Jigi Lens — Booking Inquiry from ' + name);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
     const mailto = `mailto:hello@jiggylens.com?subject=${subject}&body=${body}`;
 

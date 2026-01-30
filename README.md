@@ -1,6 +1,6 @@
-# JIGGY LENS
+# JIGI LENS
 
-A modern, cinematic portfolio website for Jiggy Lens photography. Built with vanilla HTML, CSS, and JavaScript.
+A modern, cinematic portfolio website for Jigi Lens photography. Built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
 
@@ -81,4 +81,4 @@ jiggylens/
 
 ## License
 
-© 2026 JIGGY LENS — Lagos
+© 2026 JIGI LENS — Lagos

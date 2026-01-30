@@ -1,6 +1,6 @@
-# Contributing to JIGGY LENS
+# Contributing to JIGI LENS
 
-Thank you for considering contributions to the JIGGY LENS portfolio website!
+Thank you for considering contributions to the JIGI LENS portfolio website!
 
 ## Overview
 
@@ -125,4 +125,4 @@ Open an issue or check the [Copilot Instructions](./.github/copilot-instructions
 
 ---
 
-Made with ❤️ by Jiggy Lens
+Made with ❤️ by Jigi Lens
