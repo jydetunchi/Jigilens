@@ -45,6 +45,12 @@ body {
   gap: 0.8rem;
 }
 
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 .brand-mark {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -57,12 +63,7 @@ body {
   background: var(--brand);
   color: var(--accent);
   border-radius: calc(var(--radius) - 4px);
-}
-
-.brand-logo {
-  width: 40px;
-  height: 40px;
-  display: block;
+  line-height: 1;
 }
 
 .brand-text {

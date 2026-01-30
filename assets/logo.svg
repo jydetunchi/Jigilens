@@ -1,25 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
-  <!-- JIGI Camera Logo -->
-  <g fill="none" stroke="#111" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
-    <!-- J -->
-    <path d="M 40 70 L 40 150 Q 40 180 70 180 L 90 180"/>
-    
-    <!-- I (camera body outline) -->
-    <rect x="120" y="70" width="24" height="120" rx="4"/>
-    
-    <!-- G with camera lens integration -->
-    <g>
-      <!-- G main curve -->
-      <path d="M 190 90 Q 170 70 145 70 Q 125 70 125 95 L 125 155 Q 125 170 145 170 Q 165 170 190 150"/>
-      
-      <!-- Camera lens - main circle -->
-      <circle cx="170" cy="120" r="38" stroke-width="16"/>
-      
-      <!-- Lens detail - diagonal line across lens -->
-      <line x1="148" y1="98" x2="192" y2="142" stroke-width="14"/>
-    </g>
-    
-    <!-- I (camera accessory - small circle top right) -->
-    <circle cx="240" cy="75" r="14" stroke-width="16"/>
-  </g>
+  <text x="40" y="180" font-family="'Playfair Display', serif" font-size="140" font-weight="800" fill="#111">LD°</text>
+  <text x="200" y="180" font-family="'Playfair Display', serif" font-size="140" font-weight="800" letter-spacing="10" fill="#111">JIGI LENS</text>
 </svg>
