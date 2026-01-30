@@ -1,4 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 240">
-  <text x="40" y="180" font-family="'Playfair Display', serif" font-size="140" font-weight="800" fill="#111">LD°</text>
-  <text x="200" y="180" font-family="'Playfair Display', serif" font-size="140" font-weight="800" letter-spacing="10" fill="#111">JIGI LENS</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240">
+  <!-- JIGI Logo: J-I-G-I with integrated camera lens -->
+  <g fill="none" stroke="#111" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+    <!-- J -->
+    <path d="M 80 40 L 80 140 Q 80 180 120 180 L 160 180"/>
+    
+    <!-- I (vertical bar) -->
+    <rect x="220" y="40" width="40" height="140" rx="8"/>
+    
+    <!-- G with lens integration -->
+    <g>
+      <!-- G main shape -->
+      <path d="M 340 60 Q 300 40 260 40 Q 220 40 220 100 L 220 160 Q 220 180 260 180 Q 300 180 340 160"/>
+      <!-- G inner horizontal bar -->
+      <line x1="260" y1="120" x2="320" y2="120" stroke-width="36"/>
+    </g>
+    
+    <!-- Large camera lens circle (overlaps G and I) -->
+    <circle cx="380" cy="110" r="85" stroke-width="32"/>
+    <!-- Lens detail - diagonal line -->
+    <line x1="310" y1="40" x2="450" y2="180" stroke-width="28"/>
+    
+    <!-- I (right side) -->
+    <rect x="520" y="40" width="40" height="140" rx="8"/>
+    
+    <!-- Camera accessory (small circle top right) -->
+    <circle cx="680" cy="60" r="28" stroke-width="32"/>
+  </g>
+  
+  <!-- Text below logo -->
+  <text x="400" y="240" font-family="'Inter', sans-serif" font-size="32" font-weight="600" text-anchor="middle" fill="#111">JIGI LENS</text>
 </svg>
